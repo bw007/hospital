@@ -69,3 +69,25 @@
     letter-spacing: 0.1px;
   }
 }
+
+.notif {
+  position: fixed;
+  top: 15px;
+  right: -250px;
+  font-size: 1.4rem;
+  padding: 10px 46px;
+  border-radius: 4px;
+  transition: right 0.5s ease-out;
+}
+.notif.danger {
+  right: 10px;
+  color: #c53030;
+  border: 1px solid #fc8181;
+  background-color: #fff5f5;
+}
+.notif.success {
+  right: 10px;
+  color: #2f855a;
+  border: 1px solid #48bb78;
+  background-color: #f0fff4;
+}

@@ -5,7 +5,7 @@ if (form) {
 
 const reg = (e) => {
   e.preventDefault();
-  
+
   let user = {};
 
   let data = new FormData(form);
@@ -21,15 +21,18 @@ const reg = (e) => {
     },
     body: JSON.stringify(user),
   })
-  .then(res => res.text())
-  .then(data => {
-    console.log(data);
-    console.log(user);
-  })
-  .finally(log => {
-    console.log("Final", log);
-  })
-  .catch(err => {
-    console.log(err);
-  });
+    .then((res) => res.text())
+    .then((data) => {
+      if (data === "success") {
+        alertMessage(data, "Muvaffaqiyatli!");
+        setTimeout(() => {
+          window.location = "login.html";
+        }, 1000);
+      } else {
+        alertMessage("danger", "Bunday foydalanuvchi mavjud!");
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 };
