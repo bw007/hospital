@@ -13,15 +13,17 @@
   
   <div class="form">
     <div class="form__inner">
-      <form action="" class="form__holder">
+      <form class="form__holder">
         <h1 class="form__title">Tizimga kirish</h1>
-        <input type="text" class="form__input" placeholder="Login">
-        <input type="password" class="form__input" placeholder="Mahfiy kalit">
-        <a href="#" class="form__link">Ro’yhatdan o’tish</a>
-        <button class="form__btn">Kirish</button>
+        <input type="text" required name="login" class="form__input" placeholder="Login">
+        <input type="password" required name="password" class="form__input" placeholder="Mahfiy kalit">
+        <a href="reg.html" class="form__link">Ro’yhatdan o’tish</a>
+        <button class="form__btn success">Kirish</button>
       </form>
     </div>
   </div>
 
+  <script src="./js/main.js"></script>
+  <script src="./js/lib/login.js"></script>
 </body>
 </html>
