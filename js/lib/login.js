@@ -5,6 +5,22 @@ if (form) {
 
 form.onsubmit = (e) => {
   e.preventDefault();
-  
-  console.log(10);
-}
+
+  let user = {};
+
+  let data = new FormData(form);
+
+  data.forEach((value, name) => {
+    user[name] = value;
+  });
+
+  const xhr = new XMLHttpRequest();
+
+  xhr.open('POST', `${URL}/auth/login`, true);
+  xhr.setRequestHeader("Content-type", "application/json");
+  xhr.onload = () => {
+    console.log(xhr.response);
+  }
+  xhr.send(JSON.stringify(user))
+
+};

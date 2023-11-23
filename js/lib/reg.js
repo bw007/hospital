@@ -24,6 +24,7 @@ const reg = (e) => {
   .then(res => res.text())
   .then(data => {
     console.log(data);
+    console.log(user);
   })
   .finally(log => {
     console.log("Final", log);
