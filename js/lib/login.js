@@ -1,6 +1,7 @@
 const form = document.querySelector(".form__holder");
 
-if (form) {}
+if (form) {
+}
 
 form.onsubmit = (e) => {
   e.preventDefault();
@@ -20,6 +21,8 @@ form.onsubmit = (e) => {
   xhr.onload = () => {
     if (xhr.status == 200 && xhr.response) {
       alertMessage("success", "Muvaffaqiyatli!");
+      localStorage.setItem("TOKEN", JSON.parse(xhr.response)?.token);
+      localStorage.setItem("user", JSON.stringify(JSON.parse(xhr.response)?.user));
       setTimeout(() => {
         window.location = "index.html";
       }, 1500);

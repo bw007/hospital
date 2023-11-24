@@ -16,3 +16,16 @@ function alertMessage(type, msg) {
     notif.classList.remove(type);
   }, 2000);
 }
+
+const checkUser = () => {
+  let url = window.location.href.split("/").at(-1);
+
+  if (["reg.html", "login.html"].includes(url)) return;
+
+  if (localStorage.getItem("TOKEN") && localStorage.getItem("user")) {
+    console.log(100);
+  } else {
+    window.location = "login.html"
+  }
+};
+checkUser();
