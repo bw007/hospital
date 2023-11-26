@@ -5,7 +5,7 @@ function alertMessage(type, msg) {
 
   if (!notif) {
     notif = document.createElement("div");
-    notif.classList?.add("notif");
+    notif.classList.add("notif");
     document.body.append(notif);
   }
 
