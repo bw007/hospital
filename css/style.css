@@ -233,4 +233,36 @@ body {
 }
 .header__avatar {
   cursor: pointer;
+}
+
+.wrapper {
+  width: 100%;
+  height: calc(100vh - 90px);
+  padding: 10px 36px 0;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table thead {
+  background: #f3f3f3;
+}
+table thead th {
+  color: #25282b;
+  font-size: 1.4rem;
+  padding: 18px 24px;
+  text-align: left;
+  border-bottom: 1px solid #DBDDE0;
+}
+table tbody {
+  background: #FFF;
+}
+table tbody td {
+  color: #52575C;
+  font-size: 1.4rem;
+  padding: 18px 24px;
+  text-align: left;
+  border-bottom: 1px solid #E8E8E8;
 }/*# sourceMappingURL=style.css.map */
